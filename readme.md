@@ -50,10 +50,6 @@ Simply visit the live website: [Md Imran's Portfolio](https://dkpython7.github.i
 
 Suggestions and improvements are always welcome! Feel free to fork the repository, open an issue, or submit a pull request.
 
-## License 📜
-
-This website is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact 📧
 
 Feel free to reach out to me:
