@@ -1,6 +1,3 @@
-Here’s the README file for your portfolio website:
-
-```markdown
 # Md Imran's Portfolio Website 💻
 
 Welcome to my personal portfolio website, where I showcase my skills, projects, and experience in **Data Science**, **Machine Learning**, and **Web Development**. The site provides a comprehensive overview of my journey, work, and contributions to various communities and societies. Check out my portfolio here: [Md Imran's Portfolio](https://dkpython7.github.io/Portfolio/).
@@ -33,7 +30,7 @@ Welcome to my personal portfolio website, where I showcase my skills, projects, 
 
 I am an active member of several tech communities, including:
 
-- **Dev Dynamos** (Core Member)
+- **Dev Dynamose** (Core Member)
 - **Codeverse** (Core Member)
 - **Code Charya** (AI ML Team)
   
@@ -65,6 +62,3 @@ Feel free to reach out to me:
 - **GitHub**: [github.com/dkpython7](https://github.com/dkpython7)
 - **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/md-imran-48a443292/)
 - **Instagram**: [Instagram](https://www.instagram.com/dk.python?igsh=cmI3ZmNtaGpzdWZm)
-```
-
-You can copy this into your `README.md` file for your portfolio repository. Let me know if you'd like any changes!
