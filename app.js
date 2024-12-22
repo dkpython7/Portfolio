@@ -25,9 +25,92 @@ imageContainer.addEventListener('click', function() {
 });
 
 var typed = new Typed(".name span", {
-    strings: ["Md Imran","An AI/ML Engineer", "A Developer","A Teacher", "A Data Analyst","Aspiring Data Scientist"],
+    strings: ["Md Imran","Aspiring AI/ML Engineer", "A Developer","A Teacher", "A Data Analyst"],
     typeSpeed: 120,
     backSpeed: 100,
     loop: true
 });
+// Select all progress bars
+const progressBars = document.querySelectorAll(".progress-bar");
 
+// Scroll event listener
+window.addEventListener("scroll", () => {
+    progressBars.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top; // Get the top position of the bar
+        const windowHeight = window.innerHeight; // Get the window's height
+
+        // Check if the bar is within the viewport
+        if (barTop < windowHeight - 100) {
+            bar.classList.add("animate");
+        } else {
+            bar.classList.remove("animate");
+        }
+    });
+});
+
+const contact = document.querySelectorAll(".contact-icon1");
+
+// Scroll event listener
+window.addEventListener("scroll", () => {
+    contact.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top; // Get the top position of the bar
+        const windowHeight = window.innerHeight; // Get the window's height
+
+        // Check if the bar is within the viewport
+        if (barTop < windowHeight - 100) {
+            bar.classList.add("animate");
+        } else {
+            bar.classList.remove("animate");
+        }
+    });
+});
+
+const timeline = document.querySelectorAll(".timeline-item");
+
+// Scroll event listener
+window.addEventListener("scroll", () => {
+    timeline.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top; // Get the top position of the bar
+        const windowHeight = window.innerHeight; // Get the window's height
+
+        // Check if the bar is within the viewport
+        if (barTop < windowHeight - 100) {
+            bar.classList.add("animate");
+        } else {
+            bar.classList.remove("animate");
+        }
+    });
+});
+const portfolio = document.querySelectorAll(".portfolio-item");
+
+// Scroll event listener
+window.addEventListener("scroll", () => {
+    portfolio.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top; // Get the top position of the bar
+        const windowHeight = window.innerHeight; // Get the window's height
+
+        // Check if the bar is within the viewport
+        if (barTop < windowHeight - 100) {
+            bar.classList.add("animate");
+        } else {
+            bar.classList.remove("animate");
+        }
+    });
+});
+
+const about = document.querySelectorAll(".about-item");
+
+// Scroll event listener
+window.addEventListener("scroll", () => {
+    about.forEach((bar) => {
+        const barTop = bar.getBoundingClientRect().top; // Get the top position of the bar
+        const windowHeight = window.innerHeight; // Get the window's height
+
+        // Check if the bar is within the viewport
+        if (barTop < windowHeight - 100) {
+            bar.classList.add("animate");
+        } else {
+            bar.classList.remove("animate");
+        }
+    });
+});

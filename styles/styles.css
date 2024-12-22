@@ -130,7 +130,50 @@ section {
 .controls .active-btn i {
   color: var(--color-white);
 }
+.contact-icon1 {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  padding-left: 4rem;
+  gap: px;              /* Add space between icons */
+  margin: 10px; 
+  margin-top: -1rem;     /* Center the div in the parent container */
+}
 
+.contact-icon1 a {
+  /* font-size: 1.7rem;    
+  color: #ffffff;           
+  transition: transform 0.3s, color 0.3s;
+  background-color: #2a2e35;
+  border-radius: 50%;  */
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  cursor: pointer;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 0.4rem;
+      transition: all 0.4s ease-in-out;
+}
+
+.contact-icon1 a:hover {
+  transform: scale(1.2);  /* Slightly enlarge the icons on hover */
+  color: royalblue;       /* Change color on hover */
+}
+
+@media (max-width: 480px) {
+  .contact-icon1 {
+      flex-wrap: wrap;    /* Allow icons to wrap if needed */
+      gap: 10px;
+      margin-left: -3rem;          /* Reduce spacing further */
+  }
+  .contact-icon1 a {
+      font-size: 0.5.rem;  /* Smaller icon size for very small screens */
+  }
+}
 .theme-btn {
   top: 5%;
   right: 3%;
@@ -192,7 +235,7 @@ section {
   height: 100%;
   object-fit: cover;
   transition: all 0.4s ease-in-out;
-  filter: grayscale(100%);
+  
 }
 
 .header-content .left-header .image img:hover {
@@ -300,72 +343,101 @@ section {
 .about-stats {
   padding-bottom: 4rem;
 }
-.about-stats .progress-bars {
+/* Container for the grid */
+.programming-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-template-columns: repeat(5, 1fr); /* Default: 5 columns */
+  grid-gap: 1.5rem;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  margin: auto;
+  animation: fadeIn 1s ease-in-out;
 }
-.about-stats .progress-bars .progress-bar {
+
+/* Individual progress bars for each language */
+.progress-bar {
+  border:1px solid #4169E1;
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.about-stats .progress-bars .progress-bar .prog-title {
-  text-transform: uppercase;
-  font-weight: 500;
+
+/* Hover effects for each language box */
+.progress-bar:hover {
+  transform: scale(1.1);
+  background-color: #000000;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
 }
-.about-stats .progress-bars .progress-bar .progress-con {
+
+/* Text inside each box */
+.prog-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
   display: flex;
   align-items: center;
+  gap: 10px;
+  margin: 0;
+  text-align: center;
+  transition: color 0.3s ease;
 }
-.about-stats .progress-bars .progress-bar .progress-con .prog-text {
-  color: var(--color-grey-2);
+
+/* Link styling */
+.prog-title a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress {
-  width: 100%;
-  height: 0.45rem;
-  background-color: var(--color-grey-4);
-  margin-left: 1rem;
-  position: relative;
+
+/* Hover effect for links */
+.prog-title a:hover {
+  color: #ffffff;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transition: all 0.4s ease-in-out;
-  width: 60%;
+
+/* Icons styling */
+.fas, .fab {
+  font-size: 24px;
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .jp {
-  width: 95%;
+
+/* Animation effect on hover */
+.progress-bar:hover .fas,
+.progress-bar:hover .fab {
+  transform: scale(1.2);
+  color: #4169E1;
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .python {
-  width: 80%;
+
+/* Fade-in animation for the grid */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .tf {
-  width: 60%;
+
+/* Responsive layout for smaller screens (2x5 grid) */
+@media (max-width: 768px) {
+  .programming-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-gap: 1rem; /* Adjust spacing */
+  }
 }
-.about-stats .progress-bars .progress-bar .progress-con .progress .np {
-  width: 75%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .pd {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .flask {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .st {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 20%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 40%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 10%;
-}
+
+
 
 .stat-title {
   text-transform: uppercase;
@@ -772,7 +844,6 @@ section {
     width: 50px;
     height: 50px;
   }
-
   .header-content {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
@@ -1029,5 +1100,100 @@ section {
     font-size: 4rem;
   }
 }
+/* Initial state of the progress bar (hidden and down) */
+.progress-bar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
 
+/* Animation state when visible */
+.progress-bar.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for 2x5 layout */
+@media (max-width: 768px) {
+  .about-stats .progress-bars {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+  }
+}
+.contact-icon1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Animation state when visible */
+.contact-icon1.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for 2x5 layout */
+@media (max-width: 768px) {
+  .about-stats .contact-icon1 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+  }
+}
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-in-out;
+}
+
+/* Animation state when visible */
+.timeline-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for 2x5 layout */
+@media (max-width: 768px) {
+  .about-stats .timeline-item {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+  }
+}
+.portfolio-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.0s ease-in-out;
+}
+
+/* Animation state when visible */
+.portfolio-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for 2x5 layout */
+@media (max-width: 768px) {
+  .about-stats .portfolio-item {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
+.about-item{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-in-out;
+}
+
+/* Animation state when visible */
+.about-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments for 2x5 layout */
+@media (max-width: 768px) {
+  .about-stats .about-item {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+  }
+}
